@@ -1,0 +1,21 @@
+.site-header {
+    .site-header-wrapper {        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+
+        .site-branding {
+            display: flex;
+            align-items: center;
+
+            p {
+                margin-left: 0.5rem;
+            }
+
+            img {
+                width: 32px;
+            }
+        }
+    }
+}

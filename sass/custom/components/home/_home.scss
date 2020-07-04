@@ -1,0 +1,12 @@
+html,
+body,
+.site {
+    height: 100%;
+}
+
+.home {
+    .site-main {
+        display: flex;
+        align-items: center;
+    }
+}

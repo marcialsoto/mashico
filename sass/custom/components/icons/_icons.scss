@@ -1,0 +1,52 @@
+.icon {
+	display: inline-block;
+	color: inherit;
+	font-style: normal;
+	line-height: 0;
+	text-align: center;
+	text-transform: none;
+	vertical-align: -0.125em;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	&.icon-dribbble {
+		color: $white;
+
+		transition: transform 0.3s, color 0.2s;
+		&:hover {
+			color: #ff4081;
+			transform: scale(1.35);
+		}
+	}
+
+	&.icon-linkedin {
+		color: $white;
+
+		transition: transform 0.3s, color 0.2s;
+		&:hover {
+			color: #0288d1;
+			transform: scale(1.35);
+		}
+	}
+
+	&.icon-facebook {
+		color: $white;
+
+		transition: transform 0.3s, color 0.2s;
+		&:hover {
+			color: #039be5;
+			transform: scale(1.35);
+		}
+	}
+
+	&.icon-youtube {
+		color: $white;
+
+		transition: transform 0.3s, color 0.2s;
+		&:hover {
+			color: #ff3d00;
+			transform: scale(1.35);
+		}
+	}
+}

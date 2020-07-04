@@ -1,0 +1,15 @@
+.site {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: 64px auto 64px;
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+}
+
+.site-header-wrapper,
+.site-main-wrapper,
+.site-footer-wrapper {
+	@extend .container;
+}

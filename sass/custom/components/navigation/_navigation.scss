@@ -1,0 +1,37 @@
+nav a {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+} 
+
+.main-navigation {
+    @include ff('PT Sans Caption', 700);
+
+    width: auto;
+
+    ul {
+        li {
+            a {
+                color: $white;
+                transition: color 0.2s;
+
+                &:hover {
+                    color: $mint;
+                }
+            }
+
+            &.current-menu-item {
+                a {
+                  color: $mint;  
+                }
+                
+            }
+        }
+    }
+}
+
+.footer-navigation {
+    a {
+        display: inline-block;
+        font-size: 24px;
+    }
+}

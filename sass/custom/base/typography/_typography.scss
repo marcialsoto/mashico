@@ -1,0 +1,141 @@
+.h1,
+h1,
+.h2,
+h2,
+.h4,
+h4,
+.h5,
+h5,
+.h6,
+h6 {
+    @include ff("Lekton", 700);
+    
+    transition: font-size 0.3s;
+    line-height: 1.15;
+}
+
+.h1,
+h1 {
+	font-size: 2rem;
+}
+
+.h2,
+h2 {
+	font-size: 1.5rem;
+}
+
+.h3,
+h3 {
+    @include ff("Lekton", 400, 'italic');
+
+	font-size: 1rem;
+}
+
+.h4,
+h4,
+.h5,
+h5,
+.h5,
+h5 {
+	font-size: 1rem;
+}
+
+body {
+	font-size: 1rem;
+}
+
+.lead {
+	@include ff("PT Sans Caption", 700);
+    
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.overline {
+	@include ff("PT Sans Caption");
+
+    font-size: 0.6rem;
+    text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.callout {
+	@include ff("PT Sans Caption");
+
+    font-size: 0.7rem;
+    font-weight: 700;
+	letter-spacing: 0.05em;
+}
+
+.caption {
+	@include ff("PT Sans Caption");
+
+    font-size: 0.6rem;
+	letter-spacing: 0.05em;
+}
+
+.btn,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.wp-block-button__link,
+.submit {
+    @include ff("PT Sans Caption", 700);
+
+    // font-size: 1rem;
+    // line-height: 1em;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 32px
+}
+
+.entry-title {
+    @extend .h1;
+    
+    .blog & {
+        @extend .h2;
+
+    }
+}
+
+// Responsive breakpoints
+@media (min-width: 576px) {
+    h1,
+    .h1 {
+        font-size: 2.5rem;
+    }
+
+    h1,
+    .h1 {
+        font-size: 2rem;
+    }
+
+    h3,
+    .h3,
+    h4,
+    .h4 {
+        font-size: 1.25rem;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    h1,
+    .h1 {
+        font-size: 3rem;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    h1,
+    .h1 {
+        font-size: 4.5rem;
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    
+}
