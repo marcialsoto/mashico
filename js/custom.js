@@ -3,7 +3,7 @@
  *
  */
 ( function() {
-    const glitchTitle = document.getElementById( 'gitch-title' );
+    const glitchTitle = document.getElementsByClassName( 'glitch-title' )[0];
 
     if ( ! glitchTitle ) {
 		return;
