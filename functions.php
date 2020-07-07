@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.1' );
+	define( '_S_VERSION', '1.0.2' );
 }
 
 if ( ! function_exists( 'mashico_setup' ) ) :
@@ -147,6 +147,7 @@ function mashico_scripts() {
 	wp_style_add_data( 'mashico-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'mashico-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'mashico-custom', get_template_directory_uri() . '/js/custom.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
