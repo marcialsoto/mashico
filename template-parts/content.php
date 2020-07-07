@@ -32,30 +32,35 @@
 	<?php mashico_post_thumbnail(); ?>
 
 	<div class="entry-content">
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'mashico' ),
-					array(
-						'span' => array(
-							'class' => array(),
+		<?php 
+			if ( is_singular() ) :
+				the_content(
+					sprintf(
+						wp_kses(
+							/* translators: %s: Name of current post. Only visible to screen readers */
+							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'mashico' ),
+							array(
+								'span' => array(
+									'class' => array(),
+								),
+							)
 						),
+						wp_kses_post( get_the_title() )
 					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'mashico' ),
-				'after'  => '</div>',
-			)
-		);
+				);
+			else :
+				the_excerpt();
+			endif;
+			
+				wp_link_pages(
+					array(
+						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'mashico' ),
+						'after'  => '</div>',
+					)
+				);
 		?>
 	</div><!-- .entry-content -->
+
 
 	<footer class="entry-footer">
 		<?php mashico_entry_footer(); ?>
