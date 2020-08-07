@@ -38,7 +38,7 @@
 						<a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo get_permalink(); ?>&title=<?php echo get_the_title(); ?>&summary=<?php echo get_the_excerpt(); ?>&source=Marcial Soto" target="_blank">
 							<i class="icon" data-icon="linkedin"></i>
 						</a>
-						<a href="https://wa.me/?text=<?php echo get_the_title(); ?>" data-action="share/whatsapp/share">
+						<a href="https://wa.me/?text=<?php echo get_permalink(); ?>" data-action="share/whatsapp/share">
 							<i class="icon" data-icon="whatsapp"></i>
 						</a>
 						<!-- <a href="https://wa.me/?text=<?php echo get_the_title(); ?>" data-action="share/whatsapp/share">
