@@ -15,16 +15,16 @@
 		<div class="site-footer-wrapper">
 			<nav id="site-footer-navigation" class="footer-navigation">
 				<a href="https://dribbble.com/marcialsoto" target="_blank">
-					<?php echo do_shortcode( '[icon type="dribbble"]' ); ?>
+					<i class="icon icon-dribbble" data-icon="dribbble" data-theme="fill"></i>
 				</a>
 				<a href="https://www.linkedin.com/in/marcialsoto/" target="_blank">
-					<?php echo do_shortcode( '[icon type="linkedin"]' ); ?>
+					<i class="icon icon-linkedin" data-icon="linkedin" data-theme="fill"></i>
 				</a>
 				<a href="https://www.facebook.com/marcialsotocom" target="_blank">
-					<?php echo do_shortcode( '[icon type="facebook"]' ); ?>
+					<i class="icon icon-facebook" data-icon="facebook" data-theme="fill"></i>
 				</a>
 				<a href="https://www.youtube.com/channel/UCmNQkmawK1SOsgrNopgFWcw" target="_blank">
-					<?php echo do_shortcode( '[icon type="youtube"]' ); ?>
+					<i class="icon icon-youtube" data-icon="youtube" data-theme="fill"></i>
 				</a>
 			</nav><!-- #site-navigation -->
 			<div class="site-info">

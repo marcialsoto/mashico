@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.2' );
+	define( '_S_VERSION', '1.0.4' );
 }
 
 if ( ! function_exists( 'mashico_setup' ) ) :
@@ -143,16 +143,33 @@ add_action( 'widgets_init', 'mashico_widgets_init' );
  * Enqueue scripts and styles.
  */
 function mashico_scripts() {
+	// Register the script
+	wp_register_script( 'mashico-custom', get_template_directory_uri() . '/js/custom.js' );
+
+	// Data
+	$datatoBePassed = array(
+		'home'            => get_stylesheet_directory_uri(),
+	);
+	
+	// Localize
+	wp_localize_script( 'mashico-custom', 'wp_vars', $datatoBePassed );
+
+
 	wp_enqueue_style( 'mashico-style', get_stylesheet_uri(), array(), _S_VERSION );
+
 	wp_style_add_data( 'mashico-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'mashico-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+
 	wp_enqueue_script( 'mashico-custom', get_template_directory_uri() . '/js/custom.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	
 }
+
+
 add_action( 'wp_enqueue_scripts', 'mashico_scripts' );
 
 /**
@@ -182,21 +199,21 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-add_shortcode( 'icon', 'mrov_icon_func' );
-function mrov_icon_func( $atts ) {
-    $atts = shortcode_atts( array(
-        'type' => 'twitter',
-        'theme' => 'fill',
-	), $atts, 'icon' );
+// add_shortcode( 'icon', 'mrov_icon_func' );
+// function mrov_icon_func( $atts ) {
+//     $atts = shortcode_atts( array(
+//         'type' => 'twitter',
+//         'theme' => 'fill',
+// 	), $atts, 'icon' );
 
-	$result = '';
+// 	$result = '';
 
-	$result .= '<i class="icon icon-'. $atts['type'] .'">';
-		$result .= '<svg width="1em" height="1em" fill="currentColor" stroke="currentColor">';
-			$result .= '<use xlink:href="'. get_template_directory_uri() .'/images/svg-defs.svg#icon-' .$atts['type'].'-'. $atts['theme'] .'" />';
-		$result .= '</svg>';
-	$result .= '</i>';
+// 	$result .= '<i class="icon icon-'. $atts['type'] .'">';
+// 		$result .= '<svg width="1em" height="1em" fill="currentColor" stroke="currentColor">';
+// 			$result .= '<use xlink:href="'. get_template_directory_uri() .'/images/svg-defs.svg#icon-' .$atts['type'].'-'. $atts['theme'] .'" />';
+// 		$result .= '</svg>';
+// 	$result .= '</i>';
  
-    return $result;
-}
+//     return $result;
+// }
 
