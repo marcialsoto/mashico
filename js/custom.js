@@ -3,6 +3,7 @@
  *
  */
 ( function() {
+  console.log(wp_vars);
     const glitchTitle = document.getElementsByClassName( 'glitch-title' )[0];
     const icons = document.getElementsByClassName('icon');
 
@@ -25,7 +26,7 @@
         let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
         var useWrapper = document.createElementNS("http://www.w3.org/2000/svg", 'use');
 
-        useWrapper.setAttributeNS( "http://www.w3.org/1999/xlink", "xlink:href", wp_vars.home + '/images/svg-defs.svg#icon-' + type + theme );
+        useWrapper.setAttributeNS( "http://www.w3.org/1999/xlink", "xlink:href", wp_vars.home + '/images/svg-defs.svg?ver='+wp_vars.project_version+'#icon-' + type + theme );
 
         svg.setAttribute("width", "1em");
         svg.setAttribute("height", "1em");
@@ -33,7 +34,7 @@
         svg.setAttribute("stroke", "currentcolor");
         svg.appendChild(useWrapper);
         icon.appendChild(svg);
-        console.log(svg);
+        // console.log(svg);
       }
     }
 

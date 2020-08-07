@@ -41,6 +41,9 @@
 						<a href="https://wa.me/?text=<?php echo get_the_title(); ?>" data-action="share/whatsapp/share">
 							<i class="icon" data-icon="whatsapp"></i>
 						</a>
+						<!-- <a href="https://wa.me/?text=<?php echo get_the_title(); ?>" data-action="share/whatsapp/share">
+							<i class="icon" data-icon="instagram"></i>
+						</a> -->
 					</nav>
 				</div>
 			</div>

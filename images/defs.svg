@@ -49,7 +49,7 @@
     <path fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M25,9c0,0-8-4-18-4v33c10,0,18,4,18,4s8-4,18-4V5C33,5,25,9,25,9z"/>
   </symbol>
 
-  <symbol id="icon-instagram" viewBox="0 0 50 50">
+  <symbol id="icon-open-instagram" viewBox="0 0 50 50">
     <path fill="none" stroke-miterlimit="10" stroke-width="2" d="M16,46h18c6.627,0,12-5.373,12-12V16c0-6.627-5.373-12-12-12H16C9.373,4,4,9.373,4,16v18C4,40.627,9.373,46,16,46z"/>
     <path fill="none" stroke-miterlimit="10" stroke-width="2" d="M25 15A10 10 0 1 0 25 35A10 10 0 1 0 25 15Z"/>
     <path d="M37 11A2 2 0 1 0 37 15A2 2 0 1 0 37 11Z"/>
